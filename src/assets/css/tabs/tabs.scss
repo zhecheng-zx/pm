@@ -1,0 +1,107 @@
+/**
+ * Created by zhangxin on 2017/3/28.
+ * 
+ */
+.custom-tabs{
+  &.left-tabs{
+    background-color: #21273d;
+    .el-tabs__nav{
+      float: left;
+    }
+    .el-tabs__header{
+      padding: 20px;
+    }
+    .el-card{
+      &.box-card{
+        >.el-card__body{
+          padding-top: 20px;
+        }
+      }
+    }
+  }
+  .el-tabs__nav {
+    float: none;
+    margin: 0 auto;
+    width: 289px;
+  }
+  .el-tabs__active-bar{
+    display:none;
+  }
+  .el-tabs__header{
+    margin-bottom: 0;
+    border-bottom: none;
+  }
+  .el-tabs__item{
+    position: relative;
+    font-size: 16px;
+    transition: color .25s;
+    color:rgba(119,145,231,.4);
+    &:after{
+      position: absolute;
+      right: 0;
+      top:50%;
+      margin-top: -8px;
+      width: 1px;
+      height:16px;
+      content: " ";
+      display: block;
+      background-color: #2f4164;
+    }
+    &.is-active{
+      &:before{
+        content:" ";
+        display:block;
+        width:15px;
+        height:2px;
+        border-radius:4px;
+        position:absolute;
+        bottom:1px;
+        left:50%;
+        margin-left:-7.5px;
+        background-color:#e4f09e;
+      }
+    }
+    &:last-child{
+      &:after{
+        width: 0;
+      }
+    }
+    &:hover{
+      color:#e4f09e;
+    }
+    &.is-active{
+      color:#e4f09e;
+    }
+  }
+}
+
+.block-tabs{
+  background: #1f2439;
+  
+  .el-tabs__nav {
+    float: none;
+    margin: 0 10px;
+    width: 100%;
+
+    .el-tabs__active-bar{
+      display: none;
+    }
+
+    .is-active{
+      background: #282e46;
+    }
+
+    .el-tabs__item{
+      width: calc(25% - 10px);
+      height: 110px;
+      line-height:110px;
+      text-align: center;
+      font-size:24px;
+    }
+  }
+
+  .el-tabs__header{
+    border-bottom: none;
+    margin-bottom: 0px;
+  }
+}
